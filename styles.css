@@ -61,9 +61,14 @@ a:hover {
     padding: 20px;
 }
 
-h1, h2 {
+h1 {
     color: #00e5ff;
-    text-shadow: 0 0 5px #00e5ff;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    color: #00e5ff;
 }
 
 p {
