@@ -1,0 +1,85 @@
+<head>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LceJq8qAAAAACfZOiXQA43PzTzhp5vuFpHknqhj"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LceJq8qAAAAACfZOiXQA43PzTzhp5vuFpHknqhj', {action: 'support'}).then(function(token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <head>
+        <title>Elipson Studios</title>
+        <link rel="icon" href="https://resources.elipson.dev/site/photos/SquareElipsonLog.png" type="image/png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+            }
+            body {
+                padding-top: 56px; /* Height of the navbar */
+            }
+            .navbar-brand img {
+                width: 32px;
+                height: 32px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://resources.elipson.dev/site/photos/Elipsonlogo.png" alt="Elipson Studios Logo">
+                Elipson Studios
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://elipson.dev">You</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Solutions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title-gradient">Elipson Studios</h1>
+                    <p>Contacting Elipson Studios is not usually taken as a joke. Usually, contacting is used for Buisness related queries/inquires, actual tech support requiring possible backend intervention, and greivances.</p>
+                    <p>We do not set up a catch all inbox to take constant junk and answers to what is already on the FAQ. That is Tux's job.</p>
+                    <p>Spam emails will be responded to with penalization and the email address will be saved to a record. Repeated offenders will be added to the spamlist and will not be able to recive support from us again.</p>
+                    <p>Emails should be formatted with the type of inquiry, product details (If applicable), and details about the inquiry. We reccomend you keep it under 1000 characters and over 500. We also reccomend that you keep your ticket number which is assigned to you by a support staff.</p>
+                    <hr>
+                    <h2>Portfolio</h2>
+                    <h3>Its empty...</h3>
+                    <p>We've been to busy with creating our new servers to be able to build up our new portfolio.</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</body>
