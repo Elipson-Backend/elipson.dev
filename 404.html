@@ -4,6 +4,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            background-image: url('https://resources.elipson.dev/site/photos/this.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
         .navbar {
             position: fixed;
             top: 0;
@@ -19,6 +25,7 @@
             object-fit: cover;
             border-radius: 50%;
         }
+        
     </style>
 </head>
 <body>
@@ -50,19 +57,18 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>That's emberrasing...</h1>
-                <p>Our CDN server returned 404.</p>
-                <p>This means that the page you are trying to access does not exist.</p>
-                <p>If this page existed before, you can contact support or ask Tux.</p>
-                <a href="support.htm">
-                    <button>Get help</button>
-                </a>
-                <a href="landing.htm">
-                    <button>Go back</button>
-            </div>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh; text-align: center;">
+        <div style="background-color: rgb(41, 41, 41); padding: 20px; border-radius: 10px;">
+            <h1>That's embarrassing...</h1>
+            <p>Our CDN server returned 404.</p>
+            <p>This means that the page you are trying to access does not exist.</p>
+            <p>If this page existed before, you can contact support or ask Tux.</p>
+            <a href="support.htm">
+                <button class="btn btn-primary">Get help</button>
+            </a>
+            <a href="landing.htm">
+                <button class="btn btn-secondary">Go back</button>
+            </a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
