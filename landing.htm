@@ -207,7 +207,7 @@
                 const apiKey = apiKeyData.api_key;  // Store the API key dynamically
 
                 // Now use that API key in the OpenAI API request
-                const openAiResponse = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+                const openAiResponse = await fetch('https://api.openai.com/v1/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
