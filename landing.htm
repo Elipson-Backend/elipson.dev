@@ -207,46 +207,43 @@
                 const apiKey = apiKeyData.api_key;  // Store the API key dynamically
 
                 // Now use that API key in the OpenAI API request
-                const openAiResponse = await fetch('https://api.openai.com/v1/completions', {
+                const openAiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${apiKey}`  // Use the dynamically fetched API key
                     },
                     body: JSON.stringify({
-                        model: 'text-davinci-003',  // Use the correct model name
-                        prompt: userInput,
-                        max_tokens: 150,   // Adjust max_tokens or other parameters
-                        temperature: 0.7,   // Set temperature
-                        top_p: 1.0,         // Set top_p
-                        n: 1,               // Number of responses
-                        stop: null          // Optional stop sequences
+                        model: 'gpt-3.5-turbo',  // Use the correct model name
+                        messages: [{ role: 'user', content: userInput }]
                     })
                 });
 
                 const data = await openAiResponse.json();
 
                 // Handle the response and display it
-                const aiMessage = document.createElement('div');
-                aiMessage.className = 'ai-message';
-                aiMessage.innerHTML = '<i class="fas fa-project-diagram" style="margin: 10px;"></i> ' + (data.choices[0].text.trim() || "Sorry, I can't seem to remember anything right now...");
-                chatContent.appendChild(aiMessage);
+                if (data.error) {
+                    console.error("OpenAI Error:", data.error.message);
+                    const errorMessage = document.createElement('div');
+                    errorMessage.className = 'ai-message';
+                    errorMessage.innerHTML = "Sorry, I can't seem to remember anything right now...";
+                    chatContent.appendChild(errorMessage);
+                } else {
+                    const aiMessage = document.createElement('div');
+                    aiMessage.className = 'ai-message';
+                    aiMessage.innerHTML = '<i class="fas fa-project-diagram" style="margin: 10px;"></i> ' + data.choices[0].message.content.trim();
+                    chatContent.appendChild(aiMessage);
+                }
             } catch (error) {
+                console.error('Error:', error);
                 const errorMessage = document.createElement('div');
                 errorMessage.className = 'ai-message';
-                errorMessage.innerHTML = '<i class="fas fa-project-diagram" style="margin: 10px;"></i>' + "Sorry, I can't seem to remember anything right now...";
+                errorMessage.innerHTML = "Sorry, I can't seem to remember anything right now...";
                 chatContent.appendChild(errorMessage);
             }
 
             chatContent.scrollTop = chatContent.scrollHeight;
         }
 
-        function openChatWindow() {
-            document.getElementById('chat-window').style.display = 'block';
-        }
-
-        function closeChatWindow() {
-            document.getElementById('chat-window').style.display = 'none';
-        }
     </script>
 </body>
