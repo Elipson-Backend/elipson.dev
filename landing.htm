@@ -182,7 +182,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-        async function sendMessage() {
+                async function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             if (!userInput) return;
 
@@ -207,7 +207,7 @@
                 const apiKey = apiKeyData.api_key;  // Store the API key dynamically
 
                 // Now use that API key in the OpenAI API request
-                const openAiResponse = await fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+                const openAiResponse = await fetch('https://api.openai.com/v1/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
