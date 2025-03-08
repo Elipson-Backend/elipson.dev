@@ -182,46 +182,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
+        function openChatWindow() {
+            document.getElementById('chat-window').style.display = 'block';
+        }
+    
+        function closeChatWindow() {
+            document.getElementById('chat-window').style.display = 'none';
+        }
+    
         async function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             if (!userInput) return;
-
+    
             const chatContent = document.getElementById('chat-content');
             const userMessage = document.createElement('div');
             userMessage.className = 'user-message';
             userMessage.innerHTML = userInput + ' <i class="fas fa-user" style="margin: 10px;"></i>';
             chatContent.appendChild(userMessage);
-
+    
             document.getElementById('user-input').value = '';
-
+    
             try {
-                // First, get the API key dynamically via POST
                 const apiKeyResponse = await fetch('https://server.elipson.dev/api/openAiBearer', {
-                    method: 'POST',  // Use POST method as per your route
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                 });
-
+    
                 const apiKeyData = await apiKeyResponse.json();
-                const apiKey = apiKeyData.api_key;  // Store the API key dynamically
-
-                // Now use that API key in the OpenAI API request
+                const apiKey = apiKeyData.api_key;
+    
                 const openAiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`  // Use the dynamically fetched API key
+                        'Authorization': `Bearer ${apiKey}`
                     },
                     body: JSON.stringify({
-                        model: 'gpt-3.5-turbo',  // Use the correct model name
+                        model: 'gpt-3.5-turbo',
                         messages: [{ role: 'user', content: userInput }]
                     })
                 });
-
+    
                 const data = await openAiResponse.json();
-
-                // Handle the response and display it
+    
                 if (data.error) {
                     console.error("OpenAI Error:", data.error.message);
                     const errorMessage = document.createElement('div');
@@ -241,9 +246,8 @@
                 errorMessage.innerHTML = "Sorry, I can't seem to remember anything right now...";
                 chatContent.appendChild(errorMessage);
             }
-
+    
             chatContent.scrollTop = chatContent.scrollHeight;
         }
-
-    </script>
+    </script>    
 </body>
