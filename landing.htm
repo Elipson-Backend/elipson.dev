@@ -1,6 +1,10 @@
+
 <head>
     <title>Elipson Studios</title>
     <style>
+        hr[style*="border-color: rgb(0, 0, 0)"] {
+            visibility: hidden;
+        }
         .ai-assistant-box {
             position: fixed;
             bottom: 20px;
@@ -174,6 +178,10 @@
         <button onclick="sendMessage()" style="padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 5px;">Send</button>
     </div>
     </div>
+    <script src="chat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             function openChatWindow() {
@@ -229,7 +237,30 @@
             window.sendMessage = sendMessage;
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="ai-assistant-box" onclick="openChatWindow()" style="right: 20px; left: auto;">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window" style="display:none; position:fixed; bottom:80px; right:20px; width:300px; height:400px; background-color:rgb(0, 0, 0); border:1px solid #ccc; border-radius:10px; z-index:1002;">
+        <div style="padding:10px; background-color:#007bff; color:white; border-top-left-radius:10px; border-top-right-radius:10px;">
+            Chat with AI
+            <button style="float:right; background:none; border:none; color:white;" onclick="closeChatWindow()">X</button>
+        </div>
+        <div id="chat-content" style="padding:10px; height:300px; overflow-y:auto;"></div>
+        <div style="padding:5px; display: flex; align-items: center; border-top: 1px solid #ccc;">
+            <input type="text" id="user-input" style="flex: 1; padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;" placeholder="Type a message...">
+            <button onclick="sendMessage()" style="padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+        </div>
+    </div>
+    <script>
+        function openChatWindow() {
+            document.getElementById('chat-window').style.display = 'block';
+        }
+
+        function closeChatWindow() {
+            document.getElementById('chat-window').style.display = 'none';
+        }
+    </script>
 </body>
+--->
