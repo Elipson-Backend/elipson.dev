@@ -30,203 +30,43 @@
     <link rel="icon" href="https://resources.elipson.dev/site/photos/SquareElipsonLog.png" type="image/png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        body {
-            padding-top: 56px; /* Height of the navbar */
-        }
-        .navbar-brand img {
-            width: 32px;
-            height: 32px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-    </style>
-</head>
-<body>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="https://resources.elipson.dev/site/photos/Elipsonlogo.png" alt="Elipson Studios Logo">
-            Elipson Studios
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://user.elipson.dev/user/">You</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/landing/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Solutions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1 class="display-4 title-gradient">Elipson Studios</h1>
-                <h2>Empowering technology with AI</h2>
-                <div class="btn-group mt-3" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fas fa-home"></i> Home technology
-                    </button>
-                    <button type="button" class="btn btn-info">
-                        <i class="fas fa-building"></i> Office technology
-                    </button>
-                    <button type="button" class="btn btn-apps">
-                        <i class="fas fa-laptop"></i> Productivity software
-                    </button>
-                    <button type="button" class="btn btn-secondary">
-                        <i class="fas fa-project-diagram"></i> AI Solutions
-                    </button>
-                    <button type="button" class="btn btn-success">
-                        <i class="fas fa-plug"></i> Powerful APIs
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        <i class="fas fa-cloud"></i> Cloud Services
-                    </button>
-                </div>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>What are we?</h2>
-                <p class="lead">Our mission is to transform the way software is built and used, leveraging the power of artificial intelligence to create innovative and efficient solutions.</p>
-                <p class="lead">One question we had is "What's going to make people chose us?" Well, we decided to do what the users want. We give users a peek behind the curtain, and give them what they want. We're always open to feedback, and our teams are always watching for flaws.</p>
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>API</h2>
-                <p class="lead">Our API is a powerful tool that allows developers to integrate advanced AI capabilities into their applications. It offers robust documentation, easy-to-use endpoints, and comprehensive support to ensure seamless integration and optimal performance.</p>
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>Home and office technology</h2>
-                <p class="lead">We also offer a wide variety of home and office technology ranging from everyday essentials like smart home devices and office automation tools to advanced AI-driven solutions that enhance productivity and efficiency in both personal and professional environments.</p>
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>Productivity software</h2>
-                <p class="lead">Our productivity software is designed to streamline workflows, automate repetitive tasks, and optimize performance. From project management tools to communication platforms, our software solutions are tailored to meet the unique needs of modern businesses and individuals.</p>
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>Epsilon Nebula</h2>
-                <p class="lead">Epsilon Nebula is our largest cloud service yet, offering cloud computing, hosting, storage, databases, and other cloud based soloutions.</p>
-                <hr style="width: 50%; height: 40px; border-color: rgb(0, 0, 0); margin: 0 auto;">
-                <hr style="width: 50%; height: 40px; border-color: white; margin: 0 auto;">
-                <h2>N.O.V.A.</h2>
-                <p class="lead">N.O.V.A. is the product we are the most proud of. NOVA, also known as Neural Omnificent Virtual Assistant is able to handle any task without prior training! NOVA uses a special method called learning to learn, AKA Meta learning. This means its always learning on the job, and we not only offer the NOVA API, but we also have NOVA Cloud, and OnSite NOVA. NOVA is efficient and doesn't need much resources to run properly.</p>
-            </div>
-        </div>
-    </div>
-    <div class="ai-assistant-box" onclick="openChatWindow()" style="right: 20px; left: auto;">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div id="chat-window" style="display:none; position:fixed; bottom:80px; right:20px; width:300px; height:400px; background-color:rgb(0, 0, 0); border:1px solid #ccc; border-radius:10px; z-index:1002;">
-        <div style="padding:10px; background-color:#007bff; color:white; border-top-left-radius:10px; border-top-right-radius:10px;">
-            Chat with AI
-            <button style="float:right; background:none; border:none; color:white;" onclick="closeChatWindow()">X</button>
-        </div>
-        <div id="chat-content" style="padding:10px; height:300px; overflow-y:auto;">
-            <!-- Chat messages will appear here -->
-        </div>
-        <style>
-            #chat-content div {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            max-width: 80%;
-            word-wrap: break-word;
-            display: flex;
-            align-items: center;
-            }
-            #chat-content .user-message {
-            background-color: #007bff;
-            color: white;
-            align-self: flex-end;
-            text-align: right;
-            float: right;
-            clear: both;
-            }
-            #chat-content .ai-message {
-            background-color: #f1f1f1;
-            color: black;
-            align-self: flex-start;
-            text-align: left;
-            float: left;
-            clear: both;
-            }
-        </style>
-    <div style="padding:5px; display: flex; align-items: center; border-top: 1px solid #ccc; margin-left: 8px; margin-right: 20px;">
-        <input type="text" id="user-input" style="flex: 1; padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;" placeholder="Type a message...">
-        <button onclick="sendMessage()" style="padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 5px;">Send</button>
-    </div>
-    </div>
-    <script src="chat.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-        function openChatWindow() {
-            document.getElementById('chat-window').style.display = 'block';
-        }
-    
-        function closeChatWindow() {
-            document.getElementById('chat-window').style.display = 'none';
-        }
-    
         async function sendMessage() {
             const userInput = document.getElementById('user-input').value;
             if (!userInput) return;
-    
+
             const chatContent = document.getElementById('chat-content');
             const userMessage = document.createElement('div');
             userMessage.className = 'user-message';
             userMessage.innerHTML = userInput + ' <i class="fas fa-user" style="margin: 10px;"></i>';
             chatContent.appendChild(userMessage);
-    
+
             document.getElementById('user-input').value = '';
-    
+
             try {
-                const apiKeyResponse = await fetch('https://server.elipson.dev/api/openAiBearer', {
-                    method: 'POST',
+                const tokenResponse = await fetch('https://server.elipson.dev/api/openAiToken', {
+                    method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json',
-                    },
+                        'Content-Type': 'application/json'
+                    }
                 });
-    
-                const apiKeyData = await apiKeyResponse.json();
-                const apiKey = apiKeyData.api_key;
-    
+
+                const { token } = await tokenResponse.json();
+
                 const openAiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
+                        'Authorization': `Bearer ${token}`
                     },
                     body: JSON.stringify({
                         model: 'gpt-3.5-turbo',
                         messages: [{ role: 'user', content: userInput }]
                     })
                 });
-    
+
                 const data = await openAiResponse.json();
-    
+
                 if (data.error) {
                     console.error("OpenAI Error:", data.error.message);
                     const errorMessage = document.createElement('div');
@@ -246,8 +86,33 @@
                 errorMessage.innerHTML = "Sorry, I can't seem to remember anything right now...";
                 chatContent.appendChild(errorMessage);
             }
-    
+
             chatContent.scrollTop = chatContent.scrollHeight;
         }
-    </script>    
+    </script>
+</head>
+<body>
+    <div class="ai-assistant-box" onclick="openChatWindow()" style="right: 20px; left: auto;">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window" style="display:none; position:fixed; bottom:80px; right:20px; width:300px; height:400px; background-color:rgb(0, 0, 0); border:1px solid #ccc; border-radius:10px; z-index:1002;">
+        <div style="padding:10px; background-color:#007bff; color:white; border-top-left-radius:10px; border-top-right-radius:10px;">
+            Chat with AI
+            <button style="float:right; background:none; border:none; color:white;" onclick="closeChatWindow()">X</button>
+        </div>
+        <div id="chat-content" style="padding:10px; height:300px; overflow-y:auto;"></div>
+        <div style="padding:5px; display: flex; align-items: center; border-top: 1px solid #ccc;">
+            <input type="text" id="user-input" style="flex: 1; padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;" placeholder="Type a message...">
+            <button onclick="sendMessage()" style="padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+        </div>
+    </div>
+    <script>
+        function openChatWindow() {
+            document.getElementById('chat-window').style.display = 'block';
+        }
+
+        function closeChatWindow() {
+            document.getElementById('chat-window').style.display = 'none';
+        }
+    </script>
 </body>
